@@ -61,7 +61,9 @@ namespace ContosoInsAuthorityAdminPortal.Controllers
         public async Task<IActionResult> Create([Bind("Id,Uidname,Version,Inscompany,Policyno,Vehicleno,Userid,Status,Firstname,Lastname,Lastmod,Startdate,Enddate")] VehiclePolicies _Policies)
         {
             _Policies.Id = Guid.NewGuid().ToString();
+          
             await _akvclient.CreateSecret(_Policies);
+          
             if (ModelState.IsValid)
             {
                 _context.Add(_Policies);
@@ -98,8 +100,9 @@ namespace ContosoInsAuthorityAdminPortal.Controllers
             {
                 return NotFound();
             }
-
+          
             await _akvclient.UpdateSecret(_Policies);
+           
             if (ModelState.IsValid)
             {
                 try
@@ -146,6 +149,9 @@ namespace ContosoInsAuthorityAdminPortal.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+            //Need to add the code to remove the existing Secret from Key Vault
+
+            //Then delete the Secret from the Azure SQL Database
             var _Policies = await _context.VehPoliciesMaster.SingleOrDefaultAsync(m => m.Id == id);
             _context.VehPoliciesMaster.Remove(_Policies);
             await _context.SaveChangesAsync();
