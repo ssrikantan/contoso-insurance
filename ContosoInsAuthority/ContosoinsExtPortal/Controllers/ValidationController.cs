@@ -1,17 +1,15 @@
-﻿using System;
+﻿using ContosoinsExtPortal.Models;
+using ContosoinsExtPortal.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ContosoinsExtPortal.Models;
-using ContosoinsExtPortal.Services;
-using Microsoft.AspNetCore.Authorization;
 
 namespace ContosoinsExtPortal.Controllers
 {
-  //  [Authorize]
+    //  [Authorize]
 
     [Produces("application/json")]
     [Route("api/Validation")]
@@ -128,26 +126,6 @@ namespace ContosoinsExtPortal.Controllers
             return isValid;
         }
 
-        // DELETE: api/Validation/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteVehPoliciesMaster([FromRoute] string id)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var vehPoliciesMaster = await _context.VehPoliciesMaster.SingleOrDefaultAsync(m => m.Id == id);
-            if (vehPoliciesMaster == null)
-            {
-                return NotFound();
-            }
-
-            _context.VehPoliciesMaster.Remove(vehPoliciesMaster);
-            await _context.SaveChangesAsync();
-
-            return Ok(vehPoliciesMaster);
-        }
 
         private bool VehPoliciesMasterExists(string id)
         {

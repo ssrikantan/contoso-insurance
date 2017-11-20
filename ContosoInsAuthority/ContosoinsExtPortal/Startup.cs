@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ContosoinsExtPortal.Models;
+using ContosoinsExtPortal.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
-using ContosoinsExtPortal.Models;
-using Microsoft.EntityFrameworkCore;
-using ContosoinsExtPortal.Services;
 
 namespace ContosoinsExtPortal
 {
@@ -38,14 +33,6 @@ namespace ContosoinsExtPortal
 
             services.AddMvc();
 
-            //var connection = @"Server=contosoinsdb.database.windows.net;Database=contosoinsauthdb;User Id=onepageradmin;Password=Pass@word123;";
-            //services.AddDbContext<ContosoinsauthdbContext>(options => options.UseSqlServer(connection));
-
-            //AKVServiceClient servClient = new AKVServiceClient(Configuration["AzureKeyVault:ClientIdWeb"],
-            //    Configuration["AzureKeyVault:ClientSecretWeb"], Configuration["AzureKeyVault:VaultName"],
-            //    Configuration["AzureKeyVault:KeyName"]);
-
-
             var clientId = Configuration["AzureKeyVault:ClientIdWeb"];
             var cerificateThumbprint = Configuration["AzureKeyVault:AuthCertThumbprint"];
 
@@ -56,9 +43,6 @@ namespace ContosoinsExtPortal
 
 
             services.AddSingleton<AKVServiceClient>(servClient);
-
-
-            //var connection = @"Server=contosoinsdb.database.windows.net;Database=contosoinsauthdb;User Id=onepageradmin;Password=Pass@word123;";
             string connection = servClient.GetDbConnectionString();
             services.AddDbContext<ContosoinsauthdbContext>(options => options.UseSqlServer(connection));
 

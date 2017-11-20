@@ -17,7 +17,6 @@ namespace ContosoinsExtPortal.Controllers
     public class VehiclePoliciesController : Controller
     {
         private readonly ContosoinsauthdbContext _context;
-        private readonly AzureAdB2COptions _options;
         public VehiclePoliciesController(ContosoinsauthdbContext context, IOptions<AzureAdB2COptions> b2cOptions)
         {
             _context = context;
