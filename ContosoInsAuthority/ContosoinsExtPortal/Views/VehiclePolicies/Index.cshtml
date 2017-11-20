@@ -1,0 +1,94 @@
+﻿@model IEnumerable<ContosoinsExtPortal.Models.VehiclePolicies>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Your Vehicle Policies</h2>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Uidname)
+                </th>
+                <th hidden="hidden">
+                    @Html.DisplayNameFor(model => model.Version)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Inscompany)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Policyno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Vehicleno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Userid)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Firstname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lastname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lastmod)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uidname)
+            </td>
+            <td hidden="hidden">
+                @Html.DisplayFor(modelItem => item.Version)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inscompany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Policyno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehicleno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Userid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastmod)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="PolicyDownload" asp-route-id="@item.Id">Policy Download</a>
+            </td>
+        </tr>
+}
+    </tbody>
+    
+</table>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

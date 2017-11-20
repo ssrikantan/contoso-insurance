@@ -1,0 +1,78 @@
+﻿@model ContosoInsAuthorityAdminPortal.Models.VehiclePolicies
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vehicle Policy Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Uidname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Uidname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Version)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Version)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Inscompany)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Inscompany)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Policyno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Policyno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicleno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vehicleno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Userid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Userid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastmod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lastmod)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

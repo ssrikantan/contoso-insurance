@@ -1,0 +1,68 @@
+﻿@model ContosoinsExtPortal.Models.InsuranceData
+
+
+@{
+    ViewData["Title"] = "ActivatePolicy";
+}
+
+<h2>Vehicle insurance Policy QR Code Download</h2>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<div>
+    <p>Hello <b> @Model.Firstname, @Model.Lastname </b>, the Insurance Policy for your vehicle <b> @Model.Vehicleno </b> has been activated. Your Policy Number is <b> @Model.Policyno .</b>
+    Right click, download the QR Code for your Policy and affix it on your vehicle. Your policy document would be sent to the email address registered with us.</p>
+</div>
+<div>
+    <table height="300">
+        <tr>
+            <td valign="top">
+                <div class="qrcode">
+                    <div id="qrcode"></div>
+                </div>
+            </td>
+        </tr>
+    </table>   
+</div>
+
+<div>
+    <input id="text" type="text" value="@Model.qrcodeData" hidden="hidden" readonly="readonly"/><br />
+</div>
+        @*<table border="1">
+            <tr>
+                <td border="1">
+                    <div class="qrcode">
+                        <div id="qrcode"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>*@   
+
+           
+
+    
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript" src="~/lib/qrcode.js"></script>
+    <script>
+        var _qrcode = new QRCode("qrcode");
+        function makeCode() {
+            var elText = document.getElementById("text");
+            _qrcode.makeCode(elText.value);
+        }
+        makeCode();
+        $("#text").
+            on("blur", function () {
+                makeCode();
+            }).
+            on("keydown", function (e) {
+                if (e.keyCode == 13) {
+                    makeCode();
+                }
+            });
+    </script>
+    }
