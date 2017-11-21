@@ -2,11 +2,11 @@
 # Log into Azure
 # **********************************************************************************************
 Write-Host 'Please log into Azure Resource Manager now' -foregroundcolor Green
-#Login-AzureRmAccount
+Login-AzureRmAccount
 $VerbosePreference = "SilentlyContinue"
 
 Get-AzureRmContext
-Select-AzureRmSubscription -SubscriptionName 'Windows Azure MSDN - Visual Studio Ultimate'
+#Select-AzureRmSubscription -SubscriptionName 'Windows Azure MSDN - Visual Studio Ultimate'
 
 $vaultName           = 'contosoinsauthkv'
 $resourceGroupName   = 'contosoInsAuthRG'

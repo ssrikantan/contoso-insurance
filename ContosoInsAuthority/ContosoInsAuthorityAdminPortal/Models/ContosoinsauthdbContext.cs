@@ -37,17 +37,17 @@ namespace ContosoInsAuthorityAdminPortal.Models
                     .HasMaxLength(50)
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.Firstname).HasMaxLength(10);
+                entity.Property(e => e.Firstname).HasMaxLength(20);
 
-                entity.Property(e => e.Inscompany).HasMaxLength(10);
+                entity.Property(e => e.Inscompany).HasMaxLength(20);
 
                 entity.Property(e => e.Lastmod)
                     .HasColumnType("datetime")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.Property(e => e.Lastname).HasMaxLength(10);
+                entity.Property(e => e.Lastname).HasMaxLength(20);
 
-                entity.Property(e => e.Policyno).HasMaxLength(10);
+                entity.Property(e => e.Policyno).HasMaxLength(20);
 
                 entity.Property(e => e.Status).HasMaxLength(10);
 
