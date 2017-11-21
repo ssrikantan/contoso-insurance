@@ -33,7 +33,7 @@ A Solution that showcases the use of Azure Key Vault to build a Solution for sec
    ````
  4. Create an Azure AD B2C Tenant. Follow the steps mentioned in the documentation link here https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-get-started
  5. Register the Customer Portal with this Azure AD B2C Tenant, as a Web App (This is for the Customer users Signup and sign in experience). Follows the steps mentioned in the Documentation link here https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-app-registration. The redirect URL configuration for the Localhost URL should be changed to the values shown in the screenshot below.
-  * Define the 'Signin or Up' policy & the 'Reset Password' Policy for this Web Application. Refer to this link for guidance in performing these steps. - https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-reference-policies. In this case, the names of these policies created are B2C_1_siorsup and B2C_1_reset respectively (see screenshot below)
+  * Define the 'Signin or Up' policy & the 'Reset Password' Policy for this Web Application. Refer to this link for guidance in performing these steps. - https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-reference-policies. In this case, the names of these policies created are B2C_1_siorsup and B2C_1_reset respectively (see JSON fragment below)
 ![GitHub Logo](/images/WebAppRegistration2.png)
 
   ````json
