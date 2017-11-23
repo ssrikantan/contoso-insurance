@@ -11,15 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ContosoinsExtPortal
 {
-    /// <summary>
-    /// This version of the code uses Docker containers and Kubernetes as the orchestration engine
-    /// </summary>
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            string test = "test";
         }
 
         public IConfiguration Configuration { get; }
