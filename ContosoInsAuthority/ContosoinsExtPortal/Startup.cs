@@ -16,6 +16,7 @@ namespace ContosoinsExtPortal
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            string test = "test";
         }
 
         public IConfiguration Configuration { get; }
