@@ -42,7 +42,7 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
     "ClientId": "Application ID for the Web App registered in Azure AD B2C above",
     "CallbackPath": "/signin-oidc",
     "Domain": "<Your B2C Tenant>.onmicrosoft.com",
-    "SignUpSignInPolicyId": "B2C_1_siorsup",
+     "SignUpSignInPolicyId": "B2C_1_siorsup",
     "ResetPasswordPolicyId": "B2C_1_reset",
     "EditProfilePolicyId": ""
   }
@@ -85,8 +85,9 @@ This QR Code can be read using any App on the Mobile device
 
 # Using Azure AD B2C features to have Users Self Sign up to the Consumer Portal
 1. Configuration required in the Azure AD B2C Tenant
-  1. See screenshot below that shows a Signin cum Signup Policy. Selecting 'Edit' would show all the atttributes used in the claim.         * :bomb: (Email verification has been explicitly disabled just to keep it simple in this example for the Signup Process)
+   1. See screenshot below that shows a Signin cum Signup Policy. Selecting 'Edit' would show all the atttributes used in the claim.         * :bomb: (Email verification has been explicitly disabled just to keep it simple in this example for the Signup Process)
   
   ![GitHub Logo](/images/ADB2CPolicies.PNG)
-  2. On the link to 'Signup' when launching this Web Application https://contosoinsusers.azurewebsites.net, the Signup form is displayed. Users could register with the Portal and start using it right away.
+  
+   2. On the link to 'Signup' when launching this Web Application https://contosoinsusers.azurewebsites.net, the Signup form is displayed. Users could register with the Portal and start using it right away.
     ![GitHub Logo](/images/SignupPage.PNG)
