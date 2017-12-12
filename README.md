@@ -60,8 +60,8 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
 user name - insadmin@contosoinsusers.onmicrosoft.com
 password - inscontoso@123
 
-2. Create an Insurance policy and associate that to a Consumer and capture Policy details in the process. 
-Launch 'Create Policy' page. Since there are no look ups implemented in the page yet, you would need to enter the Username of the Customer manually (plaker) in the screenshot below.
+2. Launch 'Create Policy' page. Create an Insurance policy and associate that to a Consumer and capture Policy details in the process. 
+Since there are no look ups implemented in the page yet, you would need to enter the Username of the Customer manually (plaker) in the screenshot below.
 ![GitHub Logo](/images/CreatePolicy.PNG)
 
 3. Log in to the Consumer portal 
@@ -73,7 +73,8 @@ Policies that have been associated to his account are ready for activation. See 
 ![GitHub Logo](/images/ActivatePolicy.PNG)
 
 4. Select the 'Edit Policy' Link on the Policy record on the landing Page
-Select the button 'Activate policy', and then select 'Policy Download'. This generates a QR Code that can be downloaded. Right click on the QR Code and select 'save' and save that to a local computer.
+Activate the policy by selecting the button 'Activate policy'. In the Landing page, then select 'Policy Download' for the Policy that you activated. This generates a QR Code that can be downloaded. Right click on the QR Code and select 'save' and save that to a local computer.
+
 ![GitHub Logo](/images/QRCode.PNG)
 
 This QR Code can be read using any App on the Mobile device
