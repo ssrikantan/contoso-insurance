@@ -20,7 +20,7 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
   * Copy the ApplicationID created for the App and paster them into the appsettings.json file in the **ContosoInsAuthorityAdminPortal.sln** Solution.
 
 ![GitHub Logo](/images/WebAppRegistration1.png)
-
+ 
   * Update the appsettings.json file in the **ContosoInsAuthorityAdminPortal.sln** Solution.
    ````json
    "AzureAd": {
@@ -42,7 +42,7 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
     "ClientId": "Application ID for the Web App registered in Azure AD B2C above",
     "CallbackPath": "/signin-oidc",
     "Domain": "<Your B2C Tenant>.onmicrosoft.com",
-    "SignUpSignInPolicyId": "B2C_1_siorsup",
+     "SignUpSignInPolicyId": "B2C_1_siorsup",
     "ResetPasswordPolicyId": "B2C_1_reset",
     "EditProfilePolicyId": ""
   }
@@ -54,3 +54,38 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
   7. Publish the Applications to Azure App Service Web Apps, from Visual Studio 2017. Add the redirect URLs in the Web Apps configuration registered in Azure AD and Azure AD B2C for the Admin Portal and Customer Portal respectively
     * Upload the certificates (.pfx files) generated during the execution of the PowerShell Scripts above to the App Service instance
     * Add the thumbprint values for the above certificates into the App Service Settings. Refer to https://docs.microsoft.com/en-us/azure/key-vault/key-vault-use-from-web-application for guidance in performing these steps
+
+# Steps to run the Solution 
+1. Log in to the Admin portal https://contosoinsadminportal.azurewebsites.net using the credentials below
+- user name - insadmin@contosoinsusers.onmicrosoft.com
+- password - inscontoso@123
+
+2. Launch 'Create Policy' page. Create an Insurance policy and associate that to a Consumer and capture Policy details in the process. 
+Since there are no look ups implemented in the page yet, you would need to enter the Username of the Customer manually (plaker) in the screenshot below.
+* :boom: The page does not handle exceptions, and not all validations are implemented.  Ensure the following when creating the policy
+  *  The Vehicle Registration number in the database table has to be unique
+   * The Policy number has to be unique as well
+
+![GitHub Logo](/images/CreatePolicy.PNG)
+
+3. Log in to the Consumer portal at https://contosoinsusers.azurewebsites.net/
+Sign in as 'plaker' to whom the Insurance Policy created in the previous step was allocated to. Policies that have been associated to his account are ready for activation. See screenshot below:
+
+- user name -  plaker
+- password - inscontoso@123
+
+![GitHub Logo](/images/ActivatePolicy.PNG)
+
+4. Select the 'Edit Policy' Link on the Policy record on the landing Page
+Activate the policy by selecting the button 'Activate policy'. In the Landing page, then select 'Policy Download' for the Policy that you activated. This generates a QR Code that can be downloaded. Right click on the QR Code and select 'save' and save that to a local computer. This QR Code can be read using any App on the Mobile device
+
+![GitHub Logo](/images/QRCode.PNG)
+
+# Using Azure AD B2C features to have Users Self Sign up to the Consumer Portal
+1) Configuration required in the Azure AD B2C Tenant:
+   See screenshot below that shows a Signin cum Signup Policy. Selecting 'Edit' would show all the atttributes used in the claim.         * :bomb: (Email verification has been explicitly disabled just to keep it simple in this example for the Signup Process)
+  
+  ![GitHub Logo](/images/ADB2CPolicies.PNG)
+  
+ 2) On the link to 'Signup' when launching this Web Application https://contosoinsusers.azurewebsites.net, the Signup form is displayed. Users could register with the Portal and start using it right away.
+    ![GitHub Logo](/images/SignupPage.PNG)
