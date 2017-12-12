@@ -77,17 +77,15 @@ Sign in as 'plaker' to whom the Insurance Policy created in the previous step wa
 ![GitHub Logo](/images/ActivatePolicy.PNG)
 
 4. Select the 'Edit Policy' Link on the Policy record on the landing Page
-Activate the policy by selecting the button 'Activate policy'. In the Landing page, then select 'Policy Download' for the Policy that you activated. This generates a QR Code that can be downloaded. Right click on the QR Code and select 'save' and save that to a local computer.
+Activate the policy by selecting the button 'Activate policy'. In the Landing page, then select 'Policy Download' for the Policy that you activated. This generates a QR Code that can be downloaded. Right click on the QR Code and select 'save' and save that to a local computer. This QR Code can be read using any App on the Mobile device
 
 ![GitHub Logo](/images/QRCode.PNG)
 
-This QR Code can be read using any App on the Mobile device
-
 # Using Azure AD B2C features to have Users Self Sign up to the Consumer Portal
-1. Configuration required in the Azure AD B2C Tenant
-   1. See screenshot below that shows a Signin cum Signup Policy. Selecting 'Edit' would show all the atttributes used in the claim.         * :bomb: (Email verification has been explicitly disabled just to keep it simple in this example for the Signup Process)
+1) Configuration required in the Azure AD B2C Tenant:
+   See screenshot below that shows a Signin cum Signup Policy. Selecting 'Edit' would show all the atttributes used in the claim.         * :bomb: (Email verification has been explicitly disabled just to keep it simple in this example for the Signup Process)
   
   ![GitHub Logo](/images/ADB2CPolicies.PNG)
   
-   2. On the link to 'Signup' when launching this Web Application https://contosoinsusers.azurewebsites.net, the Signup form is displayed. Users could register with the Portal and start using it right away.
+ 2) On the link to 'Signup' when launching this Web Application https://contosoinsusers.azurewebsites.net, the Signup form is displayed. Users could register with the Portal and start using it right away.
     ![GitHub Logo](/images/SignupPage.PNG)
