@@ -62,7 +62,7 @@ password - inscontoso@123
 
 2. Create an Insurance policy and associate that to a Consumer and capture Policy details in the process. 
 Launch 'Create Policy' page. Since there are no look ups implemented in the page yet, you would need to enter the Username of the Customer manually (plaker) in the screenshot below.
-![GitHub Logo](/images/CreatePolicy.png)
+![GitHub Logo](/images/CreatePolicy.PNG)
 
 3. Log in to the Consumer portal 
 Sign in as Paul laker to whom the Insurance Policy created in the previous step was allocated to
