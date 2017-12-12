@@ -12,12 +12,12 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
   * Create a Secret in the Key Vault created above, with the name **dbconnstr**  and store the connection string of the Azure SQL Database created in step 1 above in the secret.
   
   * PrepareContosousersAKV.ps1 - Run this script on your Azure Subscription. (This is for the Customer Portal)
-      * Copy the output values for the VaultUrl, AuthClientId (Client ID of the Service Principal), AuthCertThumbprint(Thumbprint of the Certificate created for the Service Principal). 
+      * Copy the output values for the VaultUrl, AuthClientId (Client ID of the Service Principal), AuthCertThumbprint(Thumbprint of the Certificate created for the Service Principal). (Note: Keep the value of the Keyvault name same as in the PrepareContosoAKV.ps1 script so that we reuse the same Key Vault created earlier, and not end up creating another one here)
       * These values need to be updated in the appsettings.json file in the **ContosoinsExtPortal.sln** Solution
   * Copy the name of the Key created earlier into the appsettings.json file in the Visual Studio Solution.
   
 3. Register the Admin Portal with Azure AD as a Web App (this is for User sign in experience to the Portal). Add the Redirect Url as shown in the screenshot below, for localhost url alone. 
-  * Copy the ApplicationID created for the App and copy them to the appsettings.json file in the **ContosoInsAuthorityAdminPortal.sln** Solution.
+  * Copy the ApplicationID created for the App and paster them into the appsettings.json file in the **ContosoInsAuthorityAdminPortal.sln** Solution.
 
 ![GitHub Logo](/images/WebAppRegistration1.png)
 
