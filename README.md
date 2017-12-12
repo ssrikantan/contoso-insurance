@@ -57,18 +57,22 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
 
 # Steps to run the Solution 
 1. Log in to the Admin portal https://contosoinsadminportal.azurewebsites.net using the credentials below
-user name - insadmin@contosoinsusers.onmicrosoft.com
-password - inscontoso@123
+- user name - insadmin@contosoinsusers.onmicrosoft.com
+- password - inscontoso@123
 
 2. Launch 'Create Policy' page. Create an Insurance policy and associate that to a Consumer and capture Policy details in the process. 
 Since there are no look ups implemented in the page yet, you would need to enter the Username of the Customer manually (plaker) in the screenshot below.
+:boom: The page does not handle exceptions, and not all validations are captured.  Ensure the following when creating the policy
+a) The Vehicle Registration number in the database table has to be unique
+b) The Policy number has to be unique as well
+
 ![GitHub Logo](/images/CreatePolicy.PNG)
 
 3. Log in to the Consumer portal 
 Sign in as Paul laker to whom the Insurance Policy created in the previous step was allocated to
-user name -  plaker
-password - inscontoso@123
-Policies that have been associated to his account are ready for activation. See screenshot below
+- user name -  plaker
+- password - inscontoso@123
+Policies that have been associated to his account are ready for activation. See screenshot below:
 
 ![GitHub Logo](/images/ActivatePolicy.PNG)
 
