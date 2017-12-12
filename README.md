@@ -62,9 +62,9 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
 
 2. Launch 'Create Policy' page. Create an Insurance policy and associate that to a Consumer and capture Policy details in the process. 
 Since there are no look ups implemented in the page yet, you would need to enter the Username of the Customer manually (plaker) in the screenshot below.
-:boom: The page does not handle exceptions, and not all validations are captured.  Ensure the following when creating the policy
-a) The Vehicle Registration number in the database table has to be unique
-b) The Policy number has to be unique as well
+* :boom: The page does not handle exceptions, and not all validations are captured.  Ensure the following when creating the policy
+  *  The Vehicle Registration number in the database table has to be unique
+   * The Policy number has to be unique as well
 
 ![GitHub Logo](/images/CreatePolicy.PNG)
 
