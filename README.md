@@ -66,7 +66,14 @@ Launch 'Create Policy' page. Since there are no look ups implemented in the page
 
 3. Log in to the Consumer portal 
 Sign in as Paul laker to whom the Insurance Policy created in the previous step was allocated to
-user name plaker@insurancecotenant.onmicrosoft.com
-password inscontoso@123
-Policies that have been associated to his account are ready for activation
-4.
+user name -  plaker
+password - inscontoso@123
+Policies that have been associated to his account are ready for activation. See screenshot below
+
+![GitHub Logo](/images/ActivatePolicy.PNG)
+
+4. Select the 'Edit Policy' Link on the Policy record on the landing Page
+Select the button 'Activate policy', and then select 'Policy Download'. This generates a QR Code that can be downloaded. Right click on the QR Code and select 'save' and save that to a local computer.
+![GitHub Logo](/images/QRCode.PNG)
+
+This QR Code can be read using any App on the Mobile device
