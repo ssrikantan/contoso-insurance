@@ -69,10 +69,10 @@ Since there are no look ups implemented in the page yet, you would need to enter
 ![GitHub Logo](/images/CreatePolicy.PNG)
 
 3. Log in to the Consumer portal 
-Sign in as Paul laker to whom the Insurance Policy created in the previous step was allocated to
+Sign in as Paul laker to whom the Insurance Policy created in the previous step was allocated to. Policies that have been associated to his account are ready for activation. See screenshot below:
+
 - user name -  plaker
 - password - inscontoso@123
-Policies that have been associated to his account are ready for activation. See screenshot below:
 
 ![GitHub Logo](/images/ActivatePolicy.PNG)
 
