@@ -54,3 +54,19 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
   7. Publish the Applications to Azure App Service Web Apps, from Visual Studio 2017. Add the redirect URLs in the Web Apps configuration registered in Azure AD and Azure AD B2C for the Admin Portal and Customer Portal respectively
     * Upload the certificates (.pfx files) generated during the execution of the PowerShell Scripts above to the App Service instance
     * Add the thumbprint values for the above certificates into the App Service Settings. Refer to https://docs.microsoft.com/en-us/azure/key-vault/key-vault-use-from-web-application for guidance in performing these steps
+
+# Steps to run the Solution 
+1. Log in to the Admin portal https://contosoinsadminportal.azurewebsites.net using the credentials below
+user name - insadmin@contosoinsusers.onmicrosoft.com
+password - inscontoso@123
+
+2. Create an Insurance policy and associate that to a Consumer and capture Policy details in the process. 
+Launch 'Create Policy' page. Since there are no look ups implemented in the page yet, you would need to enter the Username of the Customer manually (plaker) in the screenshot below.
+![GitHub Logo](/images/CreatePolicy.png)
+
+3. Log in to the Consumer portal 
+Sign in as Paul laker to whom the Insurance Policy created in the previous step was allocated to
+user name plaker@insurancecotenant.onmicrosoft.com
+password inscontoso@123
+Policies that have been associated to his account are ready for activation
+4.
