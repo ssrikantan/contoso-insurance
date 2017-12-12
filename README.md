@@ -82,3 +82,7 @@ Activate the policy by selecting the button 'Activate policy'. In the Landing pa
 ![GitHub Logo](/images/QRCode.PNG)
 
 This QR Code can be read using any App on the Mobile device
+
+# Using Azure AD B2C features to have Users Self Sign up to the Consumer Portal
+1. Configuration required in the Azure AD B2C Tenant
+  1. 
