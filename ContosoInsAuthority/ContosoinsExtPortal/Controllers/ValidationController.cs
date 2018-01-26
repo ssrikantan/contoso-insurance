@@ -1,5 +1,6 @@
 ﻿using ContosoinsExtPortal.Models;
 using ContosoinsExtPortal.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ContosoinsExtPortal.Controllers
 {
-    //  [Authorize]
+      [Authorize]
 
     [Produces("application/json")]
     [Route("api/Validation")]

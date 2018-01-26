@@ -21,11 +21,11 @@ namespace ContosoInsAuthorityAdminPortal.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private KeyVaultClient keyVaultClient;
-        private string kvName = "contosoInsAuthKV";
-        private string keyName = "contosodefkey";
+  //      private KeyVaultClient keyVaultClient;
+  //      private string kvName = "contosoInsAuthKV";
+  //      private string keyName = "contosodefkey";
 
-        private string Keyidentifier = "https://contosoinsauthkv.vault.azure.net/keys/contosodefkey/e24d2466714d466785f63dc05e4d196c";
+  //      private string Keyidentifier = "https://contosoinsauthkv.vault.azure.net/keys/contosodefkey/e24d2466714d466785f63dc05e4d196c";
         public IActionResult Index()
         {
             //keyVaultClient = new KeyVaultClient(GetAccessToken);

@@ -13,7 +13,7 @@ namespace ContosoinsExtPortal.Services
     public class AKVServiceClient
     {
         private string _clientid;
-        private string _secret;
+      //  private string _secret;
         private KeyVaultClient _keyVaultClient;
         private string _keyVaultName;
         private string _keyName;
