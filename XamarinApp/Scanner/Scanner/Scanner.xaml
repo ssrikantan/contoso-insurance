@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Scanner.Scanner">
+	<ContentPage.Content>
+        <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+ 
+    <Button Grid.Row="0"
+      Grid.Column="0"
+      Text="Start"
+      BackgroundColor="Gray"
+      TextColor="White"
+      Clicked="OnClickStart" />
+</Grid>
+	</ContentPage.Content>
+</ContentPage>
