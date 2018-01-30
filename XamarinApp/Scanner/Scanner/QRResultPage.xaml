@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Scanner.QRResultPage"
+    >
+	<ContentPage.Content>
+         <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+
+            <Label Text="First Name" Grid.Row="0" Grid.Column="0" />
+            <Label Grid.Row="0" Grid.Column="1" x:Name="lblFNameValue"/>
+            
+             <Label Text="Last Name" Grid.Row="1" Grid.Column="0" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="lblLNameValue"/>
+            
+            <Label Text="Insurace Company" Grid.Row="2" Grid.Column="0" />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="lblInsCompanyValue" />
+            
+            <Label Text="Policy #" Grid.Row="3" Grid.Column="0" />
+            <Label Grid.Row="3" Grid.Column="1" x:Name="lblPolicyNoValue" />
+
+            <Label Text="Vehicle #" Grid.Row="4" Grid.Column="0" />
+            <Label Grid.Row="4" Grid.Column="1" x:Name="lblVehicleNoValue" />
+
+             <Label Text="End Date" Grid.Row="5" Grid.Column="0" />
+            <Label Grid.Row="5" Grid.Column="1" x:Name="lblEndDateValue" />
+       
+            <Button Text="Validate" Grid.Row="7" Grid.ColumnSpan="2" x:Name="btnValidate" HeightRequest="50"></Button>
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>
