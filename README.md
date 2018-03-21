@@ -1,5 +1,5 @@
 # Using Azure Key Vault to manage and store sensitive Business information
-A Solution that showcases the use of Azure Key Vault to for secure handling of Business sensitive data. To understand the context of scenario, refer to the article published in the MSDN Magazine <link to be added later>
+A Solution that showcases the use of Azure Key Vault to for secure handling of Business sensitive data. To understand the context of scenario, refer to the article published in the MSDN Magazine here https://msdn.microsoft.com/en-us/magazine/mt845653
 
 # Steps to Deploy the Solution 
 
