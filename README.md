@@ -75,7 +75,7 @@ Sign in as 'plaker' to whom the Insurance Policy created in the previous step wa
 - user name -  plaker
 - password - inscontoso@123
 
-![GitHub Logo](/images/ActivatePolicy.PNG)
+![GitHub Logo](/images/ActivatePolicy.png)
 
 4. Select the 'Edit Policy' Link on the Policy record on the landing Page
 Activate the policy by selecting the button 'Activate policy'. In the Landing page, then select 'Policy Download' for the Policy that you activated. This generates a QR Code that can be downloaded. Right click on the QR Code and select 'save' and save that to a local computer. This QR Code can be read using any App on the Mobile device
