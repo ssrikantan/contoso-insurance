@@ -1,4 +1,4 @@
-# Using Azure Key Vault to manage and store sensitive Business information
+ # Using Azure Key Vault to manage and store sensitive Business information
 A Solution that showcases the use of Azure Key Vault to for secure handling of Business sensitive data. To understand the context of scenario, refer to the article published in the MSDN Magazine here https://msdn.microsoft.com/en-us/magazine/mt845653
 
 # Steps to Deploy the Solution 
@@ -67,7 +67,7 @@ Since there are no look ups implemented in the page yet, you would need to enter
   *  The Vehicle Registration number in the database table has to be unique
    * The Policy number has to be unique as well
 
-![GitHub Logo](/images/CreatePolicy.PNG)
+![GitHub Logo](/images/CreatePolicy.png)
 
 3. Log in to the Consumer portal at https://contosoinsusers.azurewebsites.net/
 Sign in as 'plaker' to whom the Insurance Policy created in the previous step was allocated to. Policies that have been associated to his account are ready for activation. See screenshot below:
@@ -75,12 +75,12 @@ Sign in as 'plaker' to whom the Insurance Policy created in the previous step wa
 - user name -  plaker
 - password - inscontoso@123
 
-![GitHub Logo](/images/ActivatePolicy.png)
+![GitHub Logo](/images/ActivatePolicy.PNG)
 
 4. Select the 'Edit Policy' Link on the Policy record on the landing Page
 Activate the policy by selecting the button 'Activate policy'. In the Landing page, then select 'Policy Download' for the Policy that you activated. This generates a QR Code that can be downloaded. Right click on the QR Code and select 'save' and save that to a local computer. This QR Code can be read using any App on the Mobile device
 
-![GitHub Logo](/images/QRCode.png)
+![GitHub Logo](/images/QRCode.PNG)
 
 # Using Azure AD B2C features to have Users Self Sign up to the Consumer Portal
 1) Configuration required in the Azure AD B2C Tenant:
