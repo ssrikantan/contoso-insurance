@@ -56,6 +56,7 @@ A Solution that showcases the use of Azure Key Vault to for secure handling of B
     * Add the thumbprint values for the above certificates into the App Service Settings. Refer to https://docs.microsoft.com/en-us/azure/key-vault/key-vault-use-from-web-application for guidance in performing these steps
 
 # Steps to run the Solution 
+Instead of deploying this Solution yourself, if you need to run the Solution accompanying this article, refer to the steps below.
 1. Log in to the Admin portal https://contosoinsadminportal.azurewebsites.net using the credentials below
 - user name - insadmin@contosoinsusers.onmicrosoft.com
 - password - inscontoso@123
